@@ -1,0 +1,196 @@
+/* ================================
+   FRAPG - Components
+   ================================ */
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.btn-yellow {
+    background: var(--construction-yellow);
+    color: var(--text-dark);
+}
+
+.btn-yellow:hover {
+    background: #d9ab1f;
+    color: var(--text-dark);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--dark-green);
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Card */
+.service-card {
+    text-align: center;
+}
+
+.service-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-green);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.service-card a {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.service-card a:hover {
+    color: var(--construction-yellow);
+}
+
+.icon-placeholder {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* Feature Items */
+.feature-item {
+    background: var(--white);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+    border-left: 4px solid var(--construction-yellow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Navbar */
+#navbar {
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav-logo {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary-green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+}
+
+.nav-cta {
+    padding: 0.55rem 1.25rem;
+    font-size: 0.9rem;
+}
+
+/* Hamburger */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--primary-green);
+    cursor: pointer;
+}
+
+/* Footer */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-grid h4 {
+    color: var(--construction-yellow);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-grid a,
+.footer-grid p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+}
+
+.footer-grid a:hover {
+    color: var(--construction-yellow);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1.25rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
