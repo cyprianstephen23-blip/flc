@@ -25,5 +25,6 @@ window.addEventListener('hashchange', router);
 // Init app
 window.addEventListener('DOMContentLoaded', () => {
     renderNavbar();
+    renderFooter();  // ← Added
     router();
 });
