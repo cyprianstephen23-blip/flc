@@ -1,0 +1,85 @@
+/* ================================
+   FRAPG - Camp & Lodge Page
+   ================================ */
+
+/* Room cards */
+.room-card {
+    padding: 0;
+    text-align: left;
+}
+
+.room-card .card-body h3 {
+    color: var(--primary-green);
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0;
+}
+
+.room-card .card-body p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.9rem;
+}
+
+.room-amenities {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.room-amenities li {
+    font-size: 0.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.room-amenities li::before {
+    content: '•';
+    color: var(--sunshine);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.room-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 0.9rem;
+}
+
+.room-price {
+    font-weight: 600;
+    color: var(--primary-green);
+    font-size: 0.85rem;
+}
+
+/* Experience cards */
+.experience-card {
+    padding: 0;
+    text-align: center;
+}
+
+.experience-card .card-image {
+    height: 130px;
+}
+
+.experience-card .card-body {
+    padding: 0.9rem;
+}
+
+.experience-card .card-body h3 {
+    font-size: 0.95rem;
+    color: var(--primary-green);
+    margin-bottom: 0.2rem;
+    letter-spacing: 0;
+}
+
+.experience-card .card-body p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
