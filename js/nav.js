@@ -7,10 +7,10 @@ function renderNavbar() {
             <!-- Left: logo + name -->
             <div class="nav-brand">
                 <a href="#home" class="nav-brand-link">
-                    <img src="flc/assets/images/constants/flc_logo.png"
+                    <img src="assets/images/constants/flc_logo.png"
                          alt="FLC Logo"
                          class="nav-logo"
-                         width="100" height="100">
+                         width="70" height="70">
                     <span class="nav-brand-text">
                         <span class="nav-brand-name">FRAPG</span>
                         <span class="nav-brand-sub">Construction &amp; Supplies</span>
