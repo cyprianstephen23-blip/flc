@@ -26,7 +26,7 @@ function renderHome() {
                 <div class="grid-3">
                     <div class="card service-card">
                         <div class="card-image">
-                            <img src="../assets/images/construction/background.jpg" alt="Construction & Supply" loading="lazy">
+                            <img src="/assets/images/construction/background.jpg" alt="Construction & Supply" loading="lazy">
                         </div>
                         <div class="card-body">
                             <span class="card-tag">01</span>
