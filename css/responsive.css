@@ -1,0 +1,151 @@
+/* ================================
+   FRAPG - Responsive
+   Fixed-scale with floor + fluid below
+   Navbar: always one line
+   ================================ */
+
+/* ----------------------------------------------------------------
+   1. PROPORTIONAL SCALE
+   ---------------------------------------------------------------- */
+html {
+    zoom: clamp(0.75, calc(100vw / 1080), 1);
+}
+
+/* ----------------------------------------------------------------
+   2. FLUID FLOOR — below 900px
+   ---------------------------------------------------------------- */
+@media (max-width: 900px) {
+    html { zoom: 1; }
+
+    /* --- Grids: stay multi-column --- */
+    .grid-2, .grid-3, .grid-4, .grid-5 {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    /* =========================================================
+       NAVBAR — scale the whole bar so links stay on one row
+       ========================================================= */
+    .nav-container {
+        padding: 0.3rem 0.6rem;
+        gap: 0.4rem;
+        /* Scale everything inside proportionally to viewport */
+        font-size: clamp(9px, 1.6vw, 13px);
+    }
+
+    /* Brand shrinks proportionally */
+    .nav-logo {
+        width: clamp(24px, 4vw, 36px);
+        height: clamp(24px, 4vw, 36px);
+    }
+
+    .nav-brand-link { gap: 0.35rem; }
+
+    .nav-brand-name {
+        font-size: clamp(0.8rem, 1.8vw, 1rem);
+        letter-spacing: 0;
+    }
+
+    .nav-brand-sub {
+        font-size: clamp(0.5rem, 1.1vw, 0.65rem);
+        letter-spacing: 0;
+    }
+
+    /* Links shrink proportionally, stay on one row */
+    .nav-links {
+        gap: clamp(0.3rem, 1.2vw, 0.9rem);
+        flex-wrap: nowrap;                 /* never wrap */
+    }
+
+    .nav-links a {
+        font-size: clamp(0.62rem, 1.5vw, 0.85rem);
+        padding: 0.15rem 0.25rem;
+        letter-spacing: 0;
+    }
+
+    .nav-cta { display: none; }
+
+    /* --- Hero: left-aligned --- */
+    .hero { min-height: 55vh; }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 { font-size: 1.5rem; }
+    .hero-text       { font-size: 0.85rem; }
+    .hero-subtitle   { font-size: 0.95rem; }
+
+    /* --- Sections --- */
+    .section { padding: 40px 0; }
+
+    /* --- Footer: 2 columns --- */
+    .site-footer .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        text-align: left;
+    }
+
+    /* --- Cards --- */
+    .card-image { height: 130px; }
+    .experience-card .card-image { height: 120px; }
+}
+
+/* ----------------------------------------------------------------
+   3. SMALL PHONES
+   ---------------------------------------------------------------- */
+@media (max-width: 420px) {
+    .container { width: 94%; }
+
+    .grid-4, .grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .hero-content h1 { font-size: 1.35rem; }
+    .hero-text       { font-size: 0.8rem; }
+
+    .btn {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Navbar goes even tighter but still one row */
+    .nav-container {
+        padding: 0.25rem 0.4rem;
+        gap: 0.3rem;
+        font-size: 9px;
+    }
+
+    .nav-logo {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nav-brand-name { font-size: 0.7rem; }
+    .nav-brand-sub  { display: none; }   /* hide tagline on tiny screens */
+
+    .nav-links {
+        gap: 0.25rem;
+    }
+
+    .nav-links a {
+        font-size: 0.58rem;
+        padding: 0.1rem 0.15rem;
+    }
+
+    /* Footer stacks only at the very smallest size */
+    .site-footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------------------------------------
+   4. DEFENSIVE: kill hamburger if nav.js still renders it
+   ---------------------------------------------------------------- */
+.nav-toggle { display: none !important; }
+.nav-links.open { display: flex; }

@@ -1,0 +1,109 @@
+/* ================================
+   FRAPG - Navbar
+   Always one line. Never wraps. Never hamburger.
+   ================================ */
+
+#navbar {
+    background: var(--white);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    flex-wrap: nowrap;          /* ← never wrap the container */
+}
+
+/* Brand (left) */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;             /* ← brand never shrinks */
+}
+
+.nav-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.nav-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.nav-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.nav-brand-name {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Menu (right) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;                    /* take remaining space */
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;          /* ← KEY: links never wrap */
+    gap: 1.4rem;
+    list-style: none;
+}
+
+.nav-links li {
+    flex-shrink: 0;             /* ← each link never shrinks */
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;        /* ← text on one line */
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+}
+
+.nav-cta {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Hamburger permanently disabled */
+.nav-toggle { display: none; }
